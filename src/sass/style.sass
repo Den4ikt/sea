@@ -1,0 +1,101 @@
+@mixin media($size)
+    @media screen and (min-width:#{$size}px)
+        @content
+
+@mixin line()
+    content: ""
+    width: 25px
+    border: 1px solid #fff
+    display: block
+    position: absolute
+    top: 50%
+@mixin button()
+    display: block
+    width: 190px
+    border-radius: 25px
+    font-size: 16px
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    padding: 10px
+@mixin cards()
+    box-sizing: border-box
+    transition: all 1s ease
+html
+    font-size: 1px
+body
+    margin: 0
+ul,li
+    list-style: none
+    padding: 0
+a
+    text-decoration: none
+.wrapper
+    margin: 0 auto
+    max-width: 1820rem
+    padding: 6px
+    font-size: 14rem
+    box-sizing: border-box
+.card-flex
+    display: flex
+    justify-content: space-between
+    .card
+        +cards()
+header
+    background-image: url("../img/boat-min.jpg")
+    background-size: cover
+    height: 963px
+.trip
+    font-size: 35px
+    color: #fff
+    font-family: "Rubik"
+.menu
+    &-header-flex
+        display: flex
+        justify-content: space-between
+    &-container
+        display: flex
+    &-item 
+        padding: 10px
+        font-size: 14px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #ffb700
+        font-weight: 400
+        font-family: "Rubik"
+        text-align: right
+    &-link 
+        color: #fff
+.header-text
+    color: #fff
+    text-align: center
+    font-family: "Rubik"
+    font-size: 16px
+    font-style: italic
+    max-width: 560px
+    margin: auto
+.header-main
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    font-size: 72px
+    letter-spacing: 1px
+    line-height: 110px
+    text-transform: uppercase
+    color: #fff
+.header-button
+    +button()
+    border: 1px solid #ffb700
+    background-color: #ffb700
+    color: #fff
+    margin: 10px auto
+.dark-text
+    color: black
+    position: absolute
+    top: 746px
+    right: 781px
+.header-small
+    font-size: 36px

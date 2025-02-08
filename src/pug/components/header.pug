@@ -1,0 +1,46 @@
+-
+    menu=[
+        {
+            url:"#",
+            text:"ГОловна"
+        },
+        {
+            url:"#",
+            text:"послуги"
+        },
+        {
+            url:"#",
+            text:"про компанію "
+        },
+        {
+            url:"#",
+            text:"Акції"
+        },
+        {
+            url:"#",
+            text:"Партнери"
+        },
+        {
+            url:"#",
+            text:"відгуки"
+        },
+        {
+            url:"#",
+            text:"Контакти"
+        }
+    ]
+
+header 
+    .wrapper.menu-header-flex
+        .logo 
+            img(src="img/trip.png", alt="logo")
+            span.trip trips
+        .burger
+        +printmenu(menu)
+    .wrapper 
+        h1.header-main Морські пригоди
+        p.header-text Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+        a.header-button(href="#") детальніше
+        h2.header-main.dark-text.header-small обери свій <br> план подорожі
+        p.header-text.dark-text Наша фірма -лідер на ринку у своїй сфері
+        a(href="#").arrow

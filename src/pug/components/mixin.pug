@@ -1,0 +1,5 @@
+mixin printmenu(items)
+    ul.menu-container
+        for item in items
+            li.menu-item
+                a(href=item.url).menu-link #{item.text}
