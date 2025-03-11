@@ -51,7 +51,7 @@ header
     background-size: cover
     //height: 963px
     padding-top: 20px
-    padding-bottom: 100px
+    padding-bottom: 66px
     position: relative
     &::after
         content:""
@@ -134,6 +134,7 @@ header
 .text-disdance
     margin-top: 10px
 .main-title
+    margin: 0px
     font-size: 36px
     letter-spacing: 1px
     line-height: 40px
@@ -141,6 +142,7 @@ header
     color: #333333
     font-weight: 400
     font-family: "Rubik"
+    text-align: left
 .main-text
     font-size: 16px
     line-height: 22px
@@ -159,19 +161,19 @@ header
 .card
     position: relative
     width: 272px
-    padding: 0px 35px 49px 21px
+    //padding: 0px 35px 49px 21px
     font-family: "Rubik"
     text-align: center
-    height: 271px
-    margin-bottom: 198px
+    margin-bottom: 40px
+    height: 270px
     &:hover
         background-color: #fff
 .star
     &::before
         content: ""
         position: absolute
-        top: -25px
-        left: -68px
+        top: 8px
+        left: 0px
         width: 61px
         height: 61px
         background-image: linear-gradient(135deg, #26cb15 50%, transparent 50%)
@@ -181,46 +183,52 @@ header
         width: 17px
         height: 16px
         position: absolute
-        top: -15px
-        left: -60px
+        top: 18px
+        left: 11px
 .card-header
-    position: absolute
-    left: -18px
-    bottom: 152px
+    margin: 0px
+    margin-top: 16px
     font-size: 18px
     line-height: 26px
     color: #333333
     font-weight: 400
 .card-price
-    position: absolute
-    left: 13px
-    bottom: 130px
+    margin-top: 10px
+    margin-bottom: 10px
     font-size: 24px
     line-height: 44px
     color: #0099ff
     font-weight: 400
 .card-text
-    position: absolute
-    left: -50px
-    bottom: 59px
+    margin: 0px
+    padding: 0px 20px
+    box-sizing: border-box
     font-size: 13px
     line-height: 19px
     color: #999999
     font-weight: 400
     text-align: left
-    max-width: 216px
+    //max-width: 216px
 .card-image
-    position: absolute
-    top: 4px
-    left: 40px
+    margin-top: 35px
+.card-button
+    padding: 5px 0px
+    margin: 0px
+    margin-top: 50px
+    width: 172px
 main
     background-color: #f5f8fa
+.divider
+    margin: 58px 0px 67px
 .tailand
     display: flex
+    column-gap: 30px
     a
         margin: 0px
         display: inline-block
         margin-right: 10px 
+        margin-top: 17px
+        padding: 7px 0px 6px
 .more
     background-color: #f5f8fa
     color: #21a6fe
@@ -228,16 +236,20 @@ main
     &:hover
         background-color: #0099ff
         color: #fff
+.tailand-title
+    padding: 0px
 .tailand-img
     width: 370px
     height: 270px
 .tailand-text
     max-width: 458px
+    line-height: 24px
 .plan
     color: #0099ff
     text-align: center
     width: 100%
     padding-left: 27%
+    font-size: 12px
 .surfing
     background-image: url(../img/surfing.png)
     //width: 1600px
@@ -296,4 +308,11 @@ main
     display: block
     text-align: center
     margin-top: 38px
-
+.tailand-button
+    width: 180px
+.island
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+.tailand-card
+    margin-top: 51px

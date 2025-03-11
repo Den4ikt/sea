@@ -37,21 +37,24 @@ main
         .card
             p.main-title про нашу <br> компанію
             p.main-text Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
-            a.header-button(href="#") детальніше
+            a.header-button.card-button(href="#") детальніше
             p.copyright * - зверніть увагу, зміна ціни може залежати від курсу долара.
         +printcard (content)
         a.copyright.plan дивитись усі плани
             img(src="img/plan.png", alt="#")
+    .wrapper 
+        hr.divider
     .wrapper.tailand
         img.tailand-img(src="img/island.png", alt="#")
         .island
-            h2.main-title Дивовижний безлюдний острів, який зводить людей з розуму
-            p.main-text.tailand-text Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можнa побачити на власні очі.
-            a.header-button(href="#") замовити тур
-            a.header-button.more(href="#") детальніше
-        .card
-            strong.card-price 575 грн./день
-            p.card-text В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії. 
+            h2.main-title.bottom-line-text.tailland-title Дивовижний безлюдний острів, який зводить людей з розуму
+            .sand 
+                p.main-text.tailand-text Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можнa побачити на власні очі.
+                a.header-button.tailand-button(href="#") замовити тур
+                a.header-button.more.tailand-button(href="#") детальніше
+            .card.tailand-card
+                strong.card-price 575 грн./день
+                p.card-text В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії. 
     .surfing 
         .wrapper.card-flex
             .wave
