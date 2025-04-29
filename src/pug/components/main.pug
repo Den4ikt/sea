@@ -32,6 +32,53 @@ mixin printcard(cards)
             h3.card-header #{card.h3}
             strong.card-price #{card.price}*
             p.card-text #{card.p}
+-
+    let offer=[
+            {
+            img:"img/offers/lake.png",
+            h3:"Романтична подорож на 2",
+            p:"Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.,",
+            price:"2599 грн.",
+            bike:false, 
+            a:"#"
+        },
+            {
+            img:"img/offers/mountain.png",
+            h3:"Велотур",
+            p:"Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+            price:"555 грн.",
+            bike:true, 
+            a:"#"
+        },
+            {
+            img:"img/offers/palm.png",
+            h3:"На острови!",
+            p:"Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+            price:"1559 грн.",
+            bike:false, 
+            a:"#"
+        },
+            {
+            img:"img/offers/board.png",
+            h3:"Катання на сьорфінгу",
+            p:"Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+            price:"999 грн",
+            bike:false, 
+            a:"#"
+        }
+    ]
+mixin printOffer(items)
+    for item in items
+        .offer-cards.star
+            img(src=item.img, alt=item.h3)
+            h3.offer-card-header #{item.h3}
+            p.offer-card-text #{item.p} 
+            .offer-line
+                strong.offer-card-price #{item.price} 
+                a.offer-card-button(href=item.a) замовити
+                    img(src="img/icons/arrow.png", alt="->")
+            if (item.bike)
+                .blue-bike
 main 
     .wrapper.card-flex
         .card
@@ -62,11 +109,18 @@ main
                     span ЖИВИ ЯСКРАВО!
                 p.surfing-text Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
                 a.header-button.surfing-button(href="#") детальніше
-            .quote
+            .quote.myborder
                 img.coma(src="img/coma.png", alt="#")
                 p.header-text.quote-text  Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
                 p.header-text.quote-name Олег Набережний
                 p.client клієнт
                 img(src="img/man.png", alt="#")
+    .offer.wrapper
+        h2.main-title.offer-title Спеціальні пропозиції тижня
+        p.offer-text Гарячі праозиції, по-швидше обирай і поїхали!    
+        .offer-flex.wrapper
+            +printOffer(offer)
+    .wrapper 
+        hr.divider  
             
         

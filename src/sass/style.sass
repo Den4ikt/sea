@@ -40,10 +40,13 @@ a
     padding: 6px
     font-size: 14rem
     box-sizing: border-box
+    align-items: center 
 .card-flex
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    flex-direction: column
+    row-gap: 20px
     .card
         +cards()
 header
@@ -65,12 +68,24 @@ header
     font-size: 35px
     color: #fff
     font-family: "Rubik"
+.burger
+    background-image: url(../img/icons/menu.svg)
+    background-size: contain
+    width: 30px
+    height: 30px
+    +media(640)
+        display: none
+.close
+    background-image: url(../img/icons/close.svg)
 .menu
     &-header-flex
         display: flex
         justify-content: space-between
+        position: relative
     &-container
-        display: flex
+        display: none
+        +media(640)
+            display: flex
     &-item 
         padding: 10px
         font-size: 14px
@@ -82,6 +97,18 @@ header
         text-align: right
     &-link 
         color: #fff
+.show
+    position: absolute
+    right: 10px
+    top: 25px
+    display: flex
+    flex-direction: column
+    .menu-item
+        background-color: #19a0c9
+        border: 1px solid #ccc
+        border-top-width: 0
+        &:first-child
+            border-top-width: 1px
 .header-text
     color: #fff
     text-align: center
@@ -94,13 +121,16 @@ header
     font-weight: 400
     font-family: "Rubik"
     text-align: center
-    font-size: 72px
+    font-size: 50px
     letter-spacing: 1px
-    line-height: 110px
+    line-height: 72px
     text-transform: uppercase
     color: #fff
     margin-top: 0
     margin-bottom: 0
+    +media(728)
+        font-size: 72px
+        line-height: 110px
 .header-button
     +button()
     border: 1px solid #ffb700
@@ -118,7 +148,8 @@ header
 .header-box
     border: 4px solid rgba(255, 255, 255, 0.2)
     //opacity: 0.200
-    width: 370px
+    max-width: 370px
+    width: 100%
     //background-color: #ffffff
     margin: 0 auto
     box-sizing: border-box
@@ -139,14 +170,18 @@ header
     margin-top: 10px
 .main-title
     margin: 0px
-    font-size: 36px
-    letter-spacing: 1px
-    line-height: 40px
+    font-size: 22px
+    letter-spacing: -1px
+    line-height: 30px
     text-transform: uppercase
     color: #333333
     font-weight: 400
     font-family: "Rubik"
     text-align: left
+    +media(728)
+        font-size: 36px
+        letter-spacing: 1px
+        line-height: 40px
 .main-text
     font-size: 16px
     line-height: 22px
@@ -227,7 +262,11 @@ main
 .tailand
     display: flex
     column-gap: 30px
+    row-gap: 20px
     padding-bottom: 80px
+    flex-direction: column
+    +media(728)
+        flex-direction: row
     a
         margin: 0px
         display: inline-block
@@ -244,8 +283,9 @@ main
 .tailand-title
     padding: 0px
 .tailand-img
-    width: 370px
+    max-width: 370px
     height: 270px
+    width: 100%
 .tailand-text
     max-width: 458px
     line-height: 24px
@@ -265,10 +305,12 @@ main
     width: 100%
     padding-left: 27%
     font-size: 12px
+    img
+        margin-left: 10px
 .surfing
     background-image: url(../img/surfing.png)
     //width: 1600px
-    height: 500px
+    //height: 500px
     background-size: cover
     padding-top: 90px
 .surfing-header
@@ -299,27 +341,32 @@ main
 .quote
     text-align: center
     margin-top: 6px
-    margin-bottom: 109px
-    position: relative
+    margin-bottom: 79px
     padding: 0px 35px
+.myborder
+    position: relative
     &::before
         content: ""
         border: 4px solid #5f6b73
         border-right: 0
-        width: 200px
-        height: 100%
+        width: 95px
+        height: calc(100% - 85px)
         position: absolute
         top: 10px
         left: 0px
+        +media(728)
+            width: 200px
     &::after
         content: ""
         border: 4px solid #5f6b73
         border-left: 0
-        width: 200px
-        height: 100%
+        width: 95px
+        height: calc(100% - 85px)
         position: absolute
         top: 10px
         right: 0px
+        +media(728)
+            width: 200px
 .client
     color: #939596
     font-size: 14px
@@ -336,3 +383,212 @@ main
     max-width: 480px
     font-style: normal
     font-size: 18px
+.offer-text
+    color: #333333
+    text-align: center
+    font-family: "Rubik"
+    font-size: 16px
+    font-style: italic
+    max-width: 560px
+    margin: auto
+    margin-top: 11px
+.offer-flex
+    display: flex
+    justify-content: space-between
+    column-gap: 30px
+    margin-top: 28px
+    flex-direction: column
+    +media(728)
+        flex-direction: row
+.offer-cards
+    position: relative
+    &::before
+        top: 0px
+        z-index: 1
+    &::after
+        top: 10px
+        z-index: 1
+.blue-bike
+    position: absolute
+    width: 60px
+    height: 190px
+    background-color: #0099ff
+    background-image: url(../img/offers/bike.png)
+    background-repeat: no-repeat
+    top: 0px
+    left: 0px
+    background-position: center center
+.offer
+    padding-bottom: 38px
+.offer-title
+    //margin-left: 286px
+    text-align: center
+    margin-top: 66px
+    letter-spacing: 0px
+.offer-card-header
+    font-size: 18px
+    line-height: 26px
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+    margin-top: 15px
+    margin-bottom: 5px
+.offer-line
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 20px
+.offer-card-price
+    font-size: 24px
+    //line-height: 44px
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+.offer-card-button
+    font-size: 13px
+    letter-spacing: 1px
+    //line-height: 110px
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    margin-bottom: 0px
+.offer-card-text
+    width: 260px
+    font-size: 13px
+    line-height: 19px
+    color: #999999
+    font-weight: 400
+    font-family: "Rubik"
+    margin-bottom: -10px
+    margin-top: 0px
+.island-palm
+    background-image: url("../img/island-palm.png")
+    width: 100%
+    height: 460px
+    background-size: cover
+    background-position: bottom
+footer
+    background-color: #f5f8fa
+.footer-flex
+    display: flex
+    column-gap: 30px
+    justify-content: center
+    flex-wrap: wrap
+    padding-top: 5px
+    margin-bottom: 76px
+    row-gap: 30px
+.footer-copy
+    background-color: #1a1a1a
+    color: #c2c2c2
+    font-size: 13px
+    font-family: "Rubik"
+    text-align: center
+    margin: 0px
+    padding: 17px
+.footer-info
+    width: 270px
+.footer-card
+    width: 270px
+    height: 270px
+.footer-house
+    position: relative
+    background-image: url(../img/footer/house.png)
+    padding: 5px 20px
+    box-sizing: border-box
+.footer-cafe
+    position: relative
+    padding: 5px 20px
+    box-sizing: border-box
+    background-image: url(../img/footer/cafe.png)
+.footer-file
+    padding-left: 50px
+    font-size: 18px
+    line-height: 24px
+    color: #ffffff
+    font-weight: 400
+    font-family: "Rubik"
+    background-image: url(../img/footer/file.png)
+    background-repeat: no-repeat
+    span
+        display: block
+        font-size: 13px
+        line-height: 19px
+        color: #bbbbbb
+.footer-text
+    font-size: 13px
+    line-height: 19px
+    color: #fefefe
+    font-weight: 400
+    font-family: "Rubik" 
+.footer-button
+    font-size: 12px
+    text-transform: uppercase
+    color: #ffb700
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    border: 2px solid #ffb700
+    padding: 8px 16px 7px
+    border-radius: 20px
+    position: absolute
+    left: 20px
+    bottom: 30px
+    img
+        margin-right: 4px
+.question
+    font-size: 18px
+    letter-spacing: 1px
+    line-height: 26px
+    color: #333333
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    margin: 0 auto
+    margin-top: -11px
+    margin-bottom: 22px 
+.question-phone
+    font-size: 18px
+    line-height: 26px
+    color: #0099ff
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    padding-left: 44px
+    margin-top: 10px
+    margin-bottom: 10px
+    img
+        margin-right: 5px
+.question-name
+    letter-spacing: 0
+    margin-top: 20px
+    margin-bottom: 0px
+.question-text
+    font-size: 13px
+    line-height: 16px
+    color: #999999
+    font-weight: 400
+    font-family: "Rubik"
+    text-align: center
+    width: 149px
+    padding-left: 61px
+    margin-bottom: 23px
+.mananger
+    margin-top: 0px
+    margin-bottom: 0px
+.question-img
+    //padding-left: 82px
+    margin: auto
+    display: block
+.footer-border
+    &::before
+        border-color: orange
+        width: 16%
+        height: 97%
+        top: 0px
+    &::after
+        border-color: orange
+        width: 16%
+        height: 97%
+        top: 0px
