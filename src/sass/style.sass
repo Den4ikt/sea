@@ -64,6 +64,11 @@ header
         bottom: 0
         height: 50px
         background-image: linear-gradient(transparent, #f5f8fa)
+.logo
+    +media(640)
+        display: none
+    +media(800)
+        display: block
 .trip
     font-size: 35px
     color: #fff
@@ -103,12 +108,18 @@ header
     top: 25px
     display: flex
     flex-direction: column
+    +media(640)
+        position: static
+        flex-direction: row
     .menu-item
         background-color: #19a0c9
         border: 1px solid #ccc
         border-top-width: 0
         &:first-child
             border-top-width: 1px
+        +media(640)
+            background-color: transparent
+            border: none
 .header-text
     color: #fff
     text-align: center
@@ -268,7 +279,7 @@ main
     row-gap: 20px
     padding-bottom: 80px
     flex-direction: column
-    +media(728)
+    +media(800)
         flex-direction: row
     a
         margin: 0px
@@ -283,8 +294,14 @@ main
     &:hover
         background-color: #0099ff
         color: #fff
-.tailand-title
+h2.tailand-title
     padding: 0px
+    +media(728)
+        font-size: 24px
+        line-height: 28px
+    +media(1200)
+        font-size: 36px
+        line-height: 40px
 .tailand-img
     max-width: 370px
     height: 270px
@@ -292,6 +309,10 @@ main
 .tailand-text
     max-width: 458px
     line-height: 24px
+    +media(800)
+        line-height: 19px
+    +media(1200)
+        line-height: 24px
 .tailand-button
     width: 180px
 .island
@@ -302,12 +323,17 @@ main
     margin-top: 51px
     margin-bottom: 0px
     height: auto
+    +media(800)
+        margin-top: 10px
+    +media(200)
+        margin-top: 51px
 .plan
     color: #0099ff
     text-align: center
     width: 100%
-    padding-left: 27%
     font-size: 12px
+    +media(1160)
+        padding-left: 27%
     img
         margin-left: 10px
 .surfing
@@ -325,9 +351,12 @@ main
     font-size: 28px
     line-height: 33px
     margin-top: -11px
-    +media(728)
+    +media(1200)
         font-size: 56px
         line-height: 66px
+    +media(728)
+        font-size: 32px
+        line-height: 35px
     span
         color: #0099ff
 .surfing-text
@@ -364,7 +393,7 @@ main
         position: absolute
         top: 10px
         left: 0px
-        +media(728)
+        +media(1200)
             width: 200px
     &::after
         content: ""
@@ -375,7 +404,7 @@ main
         position: absolute
         top: 10px
         right: 0px
-        +media(728)
+        +media(1200)
             width: 200px
 .client
     color: #939596
@@ -404,11 +433,10 @@ main
     margin-top: 11px
 .offer-flex
     display: flex
-    justify-content: space-between
+    justify-content: center
     column-gap: 25px
     row-gap: 50px
     margin-top: 28px
-    flex-direction: column
     flex-wrap: wrap
     +media(728)
         flex-direction: row
