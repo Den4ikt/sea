@@ -80,7 +80,7 @@ mixin printOffer(items)
             if (item.bike)
                 .blue-bike
 main 
-    .wrapper.card-flex
+    .wrapper.card-flex#about
         .card
             p.main-title про нашу <br> компанію
             p.main-text Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
@@ -91,8 +91,8 @@ main
             img(src="img/plan.png", alt="#")
     .wrapper 
         hr.divider
-    .wrapper.tailand
-        img.tailand-img(src="img/island.png", alt="#")
+    .wrapper.tailand#tailand
+        img.tailand-img(src="img/island.jpg", alt="#")
         .island
             h2.main-title.bottom-line-text.tailand-title Дивовижний безлюдний острів, який зводить людей з розуму
             .sand 
@@ -102,7 +102,7 @@ main
             .card.tailand-card
                 strong.card-price 575 грн./день
                 p.card-text В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії. 
-    .surfing 
+    .surfing#surfing
         .wrapper.card-flex
             .wave
                 h2.header-main.surfing-header СПІЙМАЙ ХВИЛЮ <br>
@@ -115,7 +115,7 @@ main
                 p.header-text.quote-name Олег Набережний
                 p.client клієнт
                 img(src="img/man.png", alt="#")
-    .offer.wrapper
+    .offer.wrapper#offer
         h2.main-title.offer-title Спеціальні пропозиції тижня
         p.offer-text Гарячі праозиції, по-швидше обирай і поїхали!    
         .offer-flex.wrapper
