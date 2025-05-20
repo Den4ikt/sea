@@ -38,8 +38,8 @@ a
     text-decoration: none
 .wrapper
     margin: 0 auto
-    max-width: 1182rem
-    padding: 6rem
+    max-width: 1190rem
+    padding: 6rem 10rem
     font-size: 14rem
     box-sizing: border-box
     align-items: center 
@@ -67,10 +67,8 @@ header
         height: 50rem
         background-image: linear-gradient(transparent, #f5f8fa)
 .logo
-    +media(640)
-        display: none
-    +media(800)
-        display: block
+    display: block
+    white-space: nowrap
 .trip
     font-size: 35rem
     color: #fff
@@ -89,10 +87,12 @@ header
         display: flex
         justify-content: space-between
         position: relative
+        column-gap: 30px
     &-container
         display: none
         +media(640)
             display: flex
+            flex-wrap: wrap
     &-item 
         padding: 10rem
         font-size: 14rem
@@ -105,6 +105,7 @@ header
     &-link 
         color: #fff
         transition: all 0.5s linear
+        white-space: nowrap
         &:hover
             color: #ffb700
 .show
@@ -224,8 +225,8 @@ header
     text-align: center
     margin-bottom: 40rem
     height: 270rem
-    &:hover
-        background-color: #fff
+.card-hover:hover
+    background-color: #fff
 .star
     &::before
         content: ""
@@ -333,6 +334,10 @@ h2.tailand-title
     margin-top: 51rem
     margin-bottom: 0rem
     height: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
     +media(800)
         margin-top: 10rem
     +media(200)
@@ -342,8 +347,11 @@ h2.tailand-title
     text-align: center
     width: 100%
     font-size: 12rem
+    transition: all 0.5s ease
     +media(1160)
         padding-left: 27%
+    &:hover
+        transform: scale(1.1)
     img
         margin-left: 10rem
 .surfing
@@ -353,6 +361,7 @@ h2.tailand-title
     background-size: cover
     padding-top: 90rem
     .card-flex
+        row-gap: 40px
         +media(728)
             flex-wrap: nowrap
             justify-content: space-between
@@ -444,7 +453,7 @@ h2.tailand-title
 .offer-flex
     display: flex
     justify-content: center
-    column-gap: 25rem
+    column-gap: 23rem
     row-gap: 50rem
     margin-top: 28rem
     flex-wrap: wrap
@@ -506,7 +515,11 @@ h2.tailand-title
     font-weight: 400
     font-family: "Rubik"
     text-align: center
+    transition: all 0.5s ease
     margin-bottom: 0rem
+    margin-right: 15px
+    &:hover
+        transform: scale(1.1)
 .offer-card-text
     width: 260rem
     font-size: 13rem
@@ -588,6 +601,10 @@ footer
     position: absolute
     left: 20rem
     bottom: 30rem
+    transition: all 0.5s ease
+    &:hover
+        filter: invert(100%)
+        background-color: black
     img
         margin-right: 4rem
 .question
@@ -611,6 +628,9 @@ footer
     padding-left: 44rem
     margin-top: 10rem
     margin-bottom: 10rem
+    &:hover
+        color: blue
+        transition: all 1s ease
     img
         margin-right: 5rem
 .question-name

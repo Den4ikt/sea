@@ -27,7 +27,7 @@ mixin printcard(cards)
         - let star="clear"
         if (card.star)
             - star="star"
-        .card(class=star) 
+        .card-hover.card(class=star) 
             img.card-image(src=card.img, alt=card.h3)
             h3.card-header #{card.h3}
             strong.card-price #{card.price}*
@@ -69,7 +69,7 @@ mixin printcard(cards)
     ]
 mixin printOffer(items)
     for item in items
-        .offer-cards.star
+        .offer-cards.star.card-hover
             img(src=item.img, alt=item.h3)
             h3.offer-card-header #{item.h3}
             p.offer-card-text #{item.p} 
@@ -99,7 +99,7 @@ main
                 p.main-text.tailand-text Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можнa побачити на власні очі.
                 a.header-button.tailand-button(href="#") замовити тур
                 a.header-button.more.tailand-button(href="#") детальніше
-            .card.tailand-card
+            .card.tailand-card.card-hover
                 strong.card-price 575 грн./день
                 p.card-text В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії. 
     .surfing#surfing
